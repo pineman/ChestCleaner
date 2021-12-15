@@ -87,7 +87,9 @@ public class SortingListener implements org.bukkit.event.Listener {
     private void onCloseInventory(InventoryCloseEvent e) {
         // Doing the auto sorting here
         if (e.getInventory().getType().equals(InventoryType.ENDER_CHEST)
-                || e.getInventory().getType().equals(InventoryType.CHEST)) {
+                || e.getInventory().getType().equals(InventoryType.CHEST)
+                || e.getInventory().getType().equals(InventoryType.BARREL)
+                || e.getInventory().getType().equals(InventoryType.SHULKER_BOX)) {
 
             Player player = (Player) e.getPlayer();
 
